@@ -1,0 +1,36 @@
+h1 {
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: bolder;
+    color: rgb(100,100,100);
+    text-align: center;
+}
+
+h2 {
+    font-family: Roboto;
+    font-size: 32px;
+    font-weight: bold;
+    color: rgb(50,50,50);
+    text-align: center;
+}
+
+p {
+    font-family: Roboto;
+    font-weight: normal;
+}
+
+.main-container {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.contact-button {
+    text-align: center;
+}
+
+#banner {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+}
+

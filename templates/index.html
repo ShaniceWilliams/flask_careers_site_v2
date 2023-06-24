@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}FindrSeekr{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename="home.css") }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+        <h1 class="text-center">FindrSeekr</h1>
+            <img id="banner" src="{{ url_for('static', filename='img/hero_img.jpg') }}"  class="img-fluid rounded" alt="w_i_t" height="320">
+                <h2 class="text-center">About Findr Seekr</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Mi quis hendrerit dolor magna. Nisl purus in mollis nunc sed id semper risus. Nibh tortor id
+        aliquet lectus. Enim tortor at auctor urna nunc id cursus metus aliquam. Non tellus orci ac auctor augue mauris.
+        Enim blandit volutpat maecenas volutpat. Risus nec feugiat in fermentum posuere. Quam pellentesque nec nam
+        aliquam sem et. Ut consequat semper viverra nam libero. Vitae turpis massa sed elementum tempus. Semper risus
+        in hendrerit gravida rutrum quisque. Sed egestas egestas fringilla phasellus faucibus scelerisque. Diam maecenas
+        sed enim ut sem viverra. Egestas fringilla phasellus faucibus scelerisque eleifend. Vestibulum sed arcu non
+        odio. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus. Faucibus interdum posuere lorem ipsum dolor
+        sit amet. Vel fringilla est ullamcorper eget nulla facilisi. Etiam tempor orci eu lobortis elementum nibh
+        tellus molestie.</p>
+            <h2 class="text-center">Open Positions</h2>
+                <p>TODO - Show first 5 open positions here</p>
+                    <div class="contact-button">
+                        <button type="button" class="btn btn-primary btn-lg">Contact Us</button>
+                    </div>
+
+        {% endblock %}
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
