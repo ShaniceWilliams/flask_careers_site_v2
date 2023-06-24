@@ -4,6 +4,7 @@ h1 {
     font-weight: bolder;
     color: rgb(100,100,100);
     text-align: center;
+    padding-bottom: 20px;
 }
 
 h2 {
@@ -44,4 +45,10 @@ p {
 .created-by {
     text-align: center;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+.nav-container {
+    max-width: 100%;
+    margin-bottom: 50px;
 }

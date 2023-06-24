@@ -3,19 +3,24 @@
 
 
 {% block content %}
+{% include 'nav.html' %}
 <h1 class="text-center">FindrSeekr</h1>
-    <img id="banner" src="{{ url_for('static', filename='img/hero_img.jpg') }}"  class="img-fluid rounded" alt="w_i_t" height="320">
+    <img id="banner" src="{{ url_for('static', filename='img/hero_img.jpg') }}"  class="img-fluid rounded" alt="w_i_t" height="500px">
         <h2 class="text-center">About Findr Seekr</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+<div class="row" style="margin: 20px auto;">
+<div class="col-md-6">
+
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
 magna aliqua. Mi quis hendrerit dolor magna. Nisl purus in mollis nunc sed id semper risus. Nibh tortor id
 aliquet lectus. Enim tortor at auctor urna nunc id cursus metus aliquam. Non tellus orci ac auctor augue mauris.
 Enim blandit volutpat maecenas volutpat. Risus nec feugiat in fermentum posuere. Quam pellentesque nec nam
 aliquam sem et. Ut consequat semper viverra nam libero. Vitae turpis massa sed elementum tempus. Semper risus
-in hendrerit gravida rutrum quisque. Sed egestas egestas fringilla phasellus faucibus scelerisque. Diam maecenas
-sed enim ut sem viverra. Egestas fringilla phasellus faucibus scelerisque eleifend. Vestibulum sed arcu non
-odio. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus. Faucibus interdum posuere lorem ipsum dolor
-sit amet. Vel fringilla est ullamcorper eget nulla facilisi. Etiam tempor orci eu lobortis elementum nibh
-tellus molestie.</p>
+in hendrerit gravida rutrum quisque. Sed egestas egestas fringilla phasellus faucibus scelerisque.</p>
+    </div>
+<div class="d-none d-md-block col-md-6">
+    <img id="about_img" src="{{ url_for('static', filename='img/about_image.jpg') }}" class="rounded mx-auto d-block" alt="w_i_t2" height="320">
+</div>
+    </div>
     <h2 class="text-center">Open Positions</h2>
         <div class="job-cards">
             {% for job in jobs %}
@@ -23,9 +28,10 @@ tellus molestie.</p>
             {% endfor %}
         </div>
             <div class="contact-button">
-                <button type="button" class="btn btn-primary btn-lg">Contact Us</button>
+                <a href="mailto:admin@findrseekr.com?subject=Questions%20from%20FindrSeekr.com&body=Hello%20FindrSeekr%20admins%2C%0D%0A%0D%0A%3CInsert%20query%20here%3E" type="button" class="btn btn-primary btn-lg">Contact Us</a>
             </div>
-        <p class="created-by">Created by Shanice.</p>
+{% include 'footer.html' %}
+
 
 {% endblock %}
 
