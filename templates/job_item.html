@@ -1,9 +1,15 @@
 <div class="job border-bottom row" style="margin-bottom: 16px; padding-bottom: 8px;">
     <div class="col-9">
     <h5 style="margin-bottom: 4px;">{{job['title']}}</h5>
-        <div>
-            <b>Location: </b>{{job['location']}}
-        </div>
+        {% if 'city' in job %}
+            <div>
+                <b>Location: </b>{{job['city']}}, {{job['country']}}
+            </div>
+        {% else %}
+            <div>
+                <b>Location: </b>{{job['country']}}
+            </div>
+        {% endif %}
         {% if 'salary' in job %}
             <div>
                 <b>Salary: </b>{{job['salary']}}
