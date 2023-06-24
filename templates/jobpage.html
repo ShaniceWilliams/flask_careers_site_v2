@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}FindrSeekr{% endblock %}
+
+{% block content %}
+{% include 'nav.html' %}
+
+<div>
+    <h5 style="margin-bottom: 4px;">Title: {{job.title}}</h5>
+
+            <div>
+                <b>Location: </b>{{job.city}}, {{job.country}}
+            </div>
+            <div>
+                <b>Salary: </b>{{job.salary}}
+            </div>
+
+            <div>
+                <b>Description: </b>{{job.description}}
+            </div>
+            <div>
+                <b>Responsibilities: </b>{{job.responsibilities}}
+            </div>
+    </div>
+
+
+{% include 'footer.html' %}
+{% endblock %}
