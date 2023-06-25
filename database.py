@@ -21,7 +21,7 @@ def load_jobs_from_db():
 def load_job_from_db(id):
     with engine.connect() as conn:
         query = text("select * from jobs where id = :val")
-        job_id = {"val": id}
+        job_id = {"val": int(id)}
         result = conn.execute(query, job_id)
         rows = result.all()
         if len(rows) == 0:

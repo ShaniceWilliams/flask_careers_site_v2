@@ -5,22 +5,40 @@
 {% include 'nav.html' %}
 
 <div>
-    <h5 style="margin-bottom: 4px;">Title: {{job.title}}</h5>
+    <h3 style="margin-bottom: 4px;">{{job[0].title}}</h3>
 
-            <div>
-                <b>Location: </b>{{job.city}}, {{job.country}}
-            </div>
-            <div>
-                <b>Salary: </b>{{job.salary}}
-            </div>
-
-            <div>
-                <b>Description: </b>{{job.description}}
-            </div>
-            <div>
-                <b>Responsibilities: </b>{{job.responsibilities}}
-            </div>
+    <div>
+        <p class="lead mt-0">{{job[0].city}}, {{job[0].country}}</p>
     </div>
+    <div>
+        <h4>Responsibilities:</h4>
+        <ul>
+            {% for line in job[0].responsibilities.split("\n") %}
+                <li class="lead mt-0">{{ line }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <h4>Requirements:</h4>
+        <ul>
+            {% for line in job[0].requirements.split("\n") %}
+                <li class="lead mt-0">{{ line }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {% if job[0].salary %}
+    <div>
+        <h4>Salary:</h4>
+        {% if job[0].currency == 'GBP' %}
+            <p class="lead mt-0">£{{job[0].salary}}</p>
+        {% elif job[0].currency == 'USD' %}
+            <p class="lead mt-0">${{job[0].salary}}</p>
+        {% endif %}
+    </div>
+    {% endif %}
+
+</div>
 
 
 {% include 'footer.html' %}
